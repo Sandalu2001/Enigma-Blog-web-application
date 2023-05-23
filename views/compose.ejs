@@ -1,0 +1,24 @@
+<%- include('partials/header')%>
+
+<h1>Compose</h1>
+
+<form action="/compose" method="POST">
+    <div class="mb-3">
+
+        <label for="title"  class="form-label">Title</label>
+        <input type="text" name="title" size="100" class="form-control">
+
+        <label for="data"  class="form-label">Data</label>
+        <textarea minlength="10" name="data" rows="8" cols="30" class="form-control"></textarea>
+
+        <label for="title"  class="form-label">Image</label>
+        <input type="file" name="avatar" accept="image/png,image/jpeg" class="form-control">
+
+    </div>
+
+    <button name="compose" type="submit" class="btn btn-primary">publish</button>
+    
+</form>
+
+<%- include('partials/footer')%>
+
