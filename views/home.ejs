@@ -3,8 +3,8 @@
 <% contentArray.forEach(function(item){   %>
     <div class="image-wrapper">
         <h1><%= item.title %></h1>
-        <img src="<%= item.img %>" alt="image">
-        <p><%= item.data.substring(0, 700) + "..."%> <a href="/posts/<%= item.title %>">Read More </a></p>
+        <img src="<%= item.image %>" alt="image">
+        <p><%= item.context.substring(0, 700) + "..."%> <a href="/posts/<%= item.title %>">Read More </a></p>
     </div>
 <% });  %>
  
