@@ -21,7 +21,7 @@ In the future, we plan to add multi-user support to the Enigma Blog application.
 
 To run the Enigma Blog web application locally, follow these steps:
 
-1. Clone the repository using `git clone https://github.com/your-username/enigma-blog.git`.
+1. Clone the repository using `https://github.com/Sandalu2001/Enigma-Blog-web-application.git`.
 2. Navigate to the project directory: `cd enigma-blog`.
 3. Install the required dependencies by running `npm install`.
 4. Set up a MongoDB Atlas database and obtain the connection URI.
