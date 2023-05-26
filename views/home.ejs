@@ -1,11 +1,33 @@
 <%- include('partials/header') %>
 
 <% contentArray.forEach(function(item){   %>
-    <div class="image-wrapper">
-        <h1><%= item.title %></h1>
-        <img src="<%= item.image %>" alt="image">
-        <p><%= item.context.substring(0, 700) + "..."%> <a href="/posts/<%= item.title %>">Read More </a></p>
+    <div class="card">
+        <div class="left">
+            <% if (item.image && item.image.data && item.image.contentType) { %>
+                <img src="data:<%= item.image.contentType %>;base64, <%= item.image.data.toString('base64') %>" />
+              <% } else { %>
+                <img src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg" alt="">
+              <% } %>
+                <div class="credentials">
+                    <h2>23<sup>th</sup> JAN 2023</h2>
+                </div>
+          
+       </div>
+        
+        <div class="right">
+            <h1><%= item.title %></h1>
+          <hr>
+          <p><%= item.context.substring(0, 300) + "..."%> <a href="/posts/<%= item.title %>">See more</a></p>
+          
+          
+        </div>
     </div>
+
+
 <% });  %>
+
+
+
  
+
 <%- include('partials/footer') %>

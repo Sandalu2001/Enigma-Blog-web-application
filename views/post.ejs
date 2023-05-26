@@ -1,11 +1,25 @@
 <%- include('partials/header') %>
 
-
-<div class="image-wrapper">
-    <h1><%= post.title %></h1>
-    <img src="<%= post.image %>" alt="image">
-    <p><%= post.context %></p>
+<div class="card">
+    <div class="left">
+        <% if (post.image && post.image.data && post.image.contentType) { %>
+            <img src="data:<%= post.image.contentType %>;base64, <%= post.image.data.toString('base64') %>" />
+          <% } else { %>
+            <img src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg" alt="">
+          <% } %>
+      <div class="date">
+        <div class="credentials">
+          <h2>23<sup>th</sup> JAN 2023</h2>
+        </div>
+      </div>
+   </div>
+    
+    <div class="right">
+      <h1><%= post.title %></h1>
+      <hr>
+      <p><%= post.context %></p>
+    </div>
 </div>
 
- 
+
 <%- include('partials/footer') %>

@@ -2,7 +2,7 @@
 
 <h1>Compose</h1>
 
-<form action="/compose" method="POST">
+<form action="/compose" method="POST" enctype="multipart/form-data">
     <div class="mb-3">
 
         <label for="title"  class="form-label">Title</label>
@@ -12,7 +12,7 @@
         <textarea minlength="10" name="data" rows="8" cols="30" class="form-control"></textarea>
 
         <label for="title"  class="form-label">Image</label>
-        <input type="file" name="avatar" accept="image/png,image/jpeg" class="form-control">
+        <input type="file" id="image" name="image" value="" class="form-control" required />
 
     </div>
 
